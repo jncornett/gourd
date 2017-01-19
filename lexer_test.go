@@ -46,7 +46,10 @@ func TestLexer(t *testing.T) {
 				{Token: gourd.TokenAnd, Value: "The balance is 0"},
 				{Token: gourd.TokenBlock, Value: "! bank check-balance ./account.csv"},
 				{Token: gourd.TokenWhen, Value: "I try to withdraw some money"},
-				{Token: gourd.TokenBlock, Value: "bank withdraw 1000 ./account.csv > out || true"},
+				{
+					Token: gourd.TokenBlock,
+					Value: "bank withdraw 1000 ./account.csv > out || true",
+				},
 				{Token: gourd.TokenThen, Value: "nothing will happen"},
 				{Token: gourd.TokenBlock, Value: "! grep '.*' out"},
 				{Token: gourd.TokenFinally},

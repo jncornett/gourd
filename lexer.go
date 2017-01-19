@@ -96,10 +96,7 @@ func (lex *lexer) Lex() (*TokenTuple, error) {
 		lex.lastIndent = 0
 	}
 	err := lex.s.Err()
-	if err != nil {
-		return nil, err
-	}
-	return nil, nil
+	return nil, err
 }
 
 var directives = [...]Token{
